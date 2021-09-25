@@ -1,0 +1,9 @@
+<project>-notebook:
+    build: .
+    ports:
+      - 8888:8888
+    volumes:
+      - ./:/home/<project>
+    stdin_open: true
+    tty: true
+    command: "jupyter-notebook --allow-root --no-browser --ip=0.0.0.0 --port=8888"
